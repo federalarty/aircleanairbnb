@@ -158,9 +158,19 @@
   </div>
 
   <script>
-    // Temporizador de 5 minutos
-    let countdown = 300; // segundos
-    const timerElement = document.getElementById("countdown");
+  // Temporizador de 5 minutos
+  let countdown = 300; // segundos
+  const timerElement = document.getElementById("countdown");
 
-    const timer = setInterval(() => {
-      const minutes = Math.
+  const timer = setInterval(() => {
+    const minutes = Math.floor(countdown / 60);
+    const seconds = countdown % 60;
+    timerElement.textContent = `${String(minutes).padStart(2, "0")}:${String(seconds).padStart(2, "0")}`;
+    if (countdown <= 0) {
+      clearInterval(timer);
+      document.getElementById("promo").style.display = "none";
+    }
+    countdown--;
+  }, 1000);
+</script>
+

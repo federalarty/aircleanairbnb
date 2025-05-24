@@ -75,17 +75,18 @@
       padding-bottom: 40px;
     }
 
-    /* === POPUP === */
+    /* === POPUP (verde suave) === */
     .popup {
       position: fixed;
       bottom: 20px;
       right: 20px;
-      background-color: #e91e63;
-      color: white;
+      background-color: #f0fdf4;
+      color: #166534;
       padding: 16px;
       border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
-      max-width: 240px;
+      border: 1px solid #bbf7d0;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+      max-width: 260px;
       font-size: 14px;
       z-index: 9999;
       text-align: left;
@@ -94,11 +95,13 @@
     .popup h3 {
       margin: 0 0 8px;
       font-size: 14px;
+      color: #166534;
     }
 
     .popup .timer {
       font-weight: bold;
       font-size: 14px;
+      color: #065f46;
     }
 
     .popup-buttons {
@@ -118,13 +121,13 @@
     }
 
     .popup .accept {
-      background-color: #fff;
-      color: #e91e63;
+      background-color: #16a34a;
+      color: white;
     }
 
     .popup .close {
-      background-color: rgba(255, 255, 255, 0.15);
-      color: white;
+      background-color: rgba(22, 101, 52, 0.1);
+      color: #166534;
     }
   </style>
 </head>
@@ -158,19 +161,20 @@
   </div>
 
   <script>
-  // Temporizador de 5 minutos
-  let countdown = 300; // segundos
-  const timerElement = document.getElementById("countdown");
+    // Temporizador de 5 minutos
+    let countdown = 300; // segundos
+    const timerElement = document.getElementById("countdown");
 
-  const timer = setInterval(() => {
-    const minutes = Math.floor(countdown / 60);
-    const seconds = countdown % 60;
-    timerElement.textContent = `${String(minutes).padStart(2, "0")}:${String(seconds).padStart(2, "0")}`;
-    if (countdown <= 0) {
-      clearInterval(timer);
-      document.getElementById("promo").style.display = "none";
-    }
-    countdown--;
-  }, 1000);
-</script>
-
+    const timer = setInterval(() => {
+      const minutes = Math.floor(countdown / 60);
+      const seconds = countdown % 60;
+      timerElement.textContent = `${String(minutes).padStart(2, "0")}:${String(seconds).padStart(2, "0")}`;
+      if (countdown <= 0) {
+        clearInterval(timer);
+        document.getElementById("promo").style.display = "none";
+      }
+      countdown--;
+    }, 1000);
+  </script>
+</body>
+</html>

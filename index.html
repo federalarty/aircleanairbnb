@@ -16,26 +16,31 @@
       align-items: center;
       text-align: center;
     }
+
     header {
       padding: 40px 20px 20px;
     }
+
     header img {
       max-width: 100%;
       width: 400px;
       border-radius: 20px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
+
     h1 {
       font-size: 2em;
       margin: 20px 0 10px;
       color: #1f2937;
     }
+
     p {
       font-size: 1.1em;
       max-width: 600px;
       margin: 0 auto 20px;
       color: #4b5563;
     }
+
     .cta-button {
       display: inline-block;
       padding: 14px 24px;
@@ -46,6 +51,7 @@
       text-decoration: none;
       margin-top: 10px;
     }
+
     .benefits {
       display: flex;
       flex-direction: column;
@@ -54,17 +60,69 @@
       max-width: 700px;
       padding: 0 20px;
     }
+
     .benefits div {
       background-color: #f3f4f6;
       padding: 20px;
       border-radius: 16px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
     }
+
     footer {
       margin-top: 40px;
       font-size: 0.9em;
       color: #6b7280;
       padding-bottom: 40px;
+    }
+
+    /* === POPUP === */
+    .popup {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #e91e63;
+      color: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+      max-width: 300px;
+      z-index: 9999;
+      text-align: left;
+    }
+
+    .popup h3 {
+      margin: 0 0 10px;
+      font-size: 1em;
+    }
+
+    .popup .timer {
+      font-weight: bold;
+      font-size: 1.2em;
+    }
+
+    .popup-buttons {
+      margin-top: 10px;
+      display: flex;
+      gap: 10px;
+    }
+
+    .popup button {
+      flex: 1;
+      padding: 10px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .popup .accept {
+      background-color: #fff;
+      color: #e91e63;
+    }
+
+    .popup .close {
+      background-color: rgba(255, 255, 255, 0.2);
+      color: white;
     }
   </style>
 </head>
@@ -86,5 +144,32 @@
   <footer>
     Powered by <strong>AirClean Brasília</strong> - sua limpeza Airbnb profissional
   </footer>
+
+  <!-- POPUP DE PROMOÇÃO -->
+  <div class="popup" id="promo">
+    <h3>🎉 Promoção exclusiva: Brinde para as primeiras clientes de hoje!</h3>
+    <p>⏳ <span class="timer" id="countdown">05:00</span></p>
+    <div class="popup-buttons">
+      <button class="accept" onclick="window.location.href='https://wa.me/5561986092092'">Aproveitar agora</button>
+      <button class="close" onclick="document.getElementById('promo').style.display='none'">Fechar</button>
+    </div>
+  </div>
+
+  <script>
+    // Temporizador de 5 minutos
+    let countdown = 300; // segundos
+    const timerElement = document.getElementById("countdown");
+
+    const timer = setInterval(() => {
+      const minutes = Math.floor(countdown / 60);
+      const seconds = countdown % 60;
+      timerElement.textContent = `${String(minutes).padStart(2, "0")}:${String(seconds).padStart(2, "0")}`;
+      if (countdown <= 0) {
+        clearInterval(timer);
+        document.getElementById("promo").style.display = "none";
+      }
+      countdown--;
+    }, 1000);
+  </script>
 </body>
 </html>

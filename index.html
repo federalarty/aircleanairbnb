@@ -130,7 +130,12 @@
 
     .combos td span {
       font-weight: bold;
-      color: #16a34a;
+    }
+
+    .combos td.desconto {
+      background-color: #e0f7ec;
+      color: #065f46;
+      font-weight: bold;
     }
 
     footer {
@@ -215,31 +220,19 @@
     <div class="room-list">
       <div class="room">
         <img src="https://i.imgur.com/SL4NIOB.png" alt="Banheiro">
-        <div>
-          <strong>Banheiro</strong><br>
-          <span>R$ 60</span>
-        </div>
+        <div><strong>Banheiro</strong><br><span>R$ 60</span></div>
       </div>
       <div class="room">
         <img src="https://i.imgur.com/2T2BJBI.png" alt="Sala">
-        <div>
-          <strong>Sala</strong><br>
-          <span>R$ 55</span>
-        </div>
+        <div><strong>Sala</strong><br><span>R$ 55</span></div>
       </div>
       <div class="room">
         <img src="https://i.imgur.com/TGF3IkD.png" alt="Cozinha">
-        <div>
-          <strong>Cozinha</strong><br>
-          <span>R$ 65</span>
-        </div>
+        <div><strong>Cozinha</strong><br><span>R$ 65</span></div>
       </div>
       <div class="room">
         <img src="https://i.imgur.com/4J0NgxD.png" alt="Quarto">
-        <div>
-          <strong>Quarto</strong><br>
-          <span>R$ 50</span>
-        </div>
+        <div><strong>Quarto</strong><br><span>R$ 50</span></div>
       </div>
     </div>
 
@@ -263,7 +256,7 @@
             <td>2</td>
             <td>R$ 110</td>
             <td><span>R$ 95</span></td>
-            <td><span>R$ 15</span></td>
+            <td class="desconto"><span>R$ 15</span></td>
           </tr>
           <tr>
             <td>Casa ou Ap. 1 quarto</td>
@@ -271,7 +264,7 @@
             <td>4</td>
             <td>R$ 230</td>
             <td><span>R$ 190</span></td>
-            <td><span>R$ 40</span></td>
+            <td class="desconto"><span>R$ 40</span></td>
           </tr>
           <tr>
             <td>Casa ou Ap. 2 quartos</td>
@@ -279,7 +272,7 @@
             <td>5</td>
             <td>R$ 280</td>
             <td><span>R$ 230</span></td>
-            <td><span>R$ 50</span></td>
+            <td class="desconto"><span>R$ 50</span></td>
           </tr>
           <tr>
             <td>Casa ou Ap. 3 quartos</td>
@@ -287,10 +280,13 @@
             <td>6</td>
             <td>R$ 330</td>
             <td><span>R$ 270</span></td>
-            <td><span>R$ 60</span></td>
+            <td class="desconto"><span>R$ 60</span></td>
           </tr>
         </tbody>
       </table>
+
+      <a href="https://wa.me/5561986092092?text=Olá!%20Gostaria%20de%20agendar%20um%20combo%20de%20limpeza%20com%20vocês."
+         class="cta-button" style="margin-top: 20px;">Agendar Combo via WhatsApp</a>
     </div>
   </section>
 

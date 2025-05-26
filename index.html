@@ -3,8 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AirClean Brasília</title>
+  <meta name="description" content="Serviço de limpeza especializada para gestantes e idosos em Brasília. Higienização segura, confortável e personalizada.">
+  <meta name="author" content="AirClean Brasília" />
+  <meta name="robots" content="index, follow">
+  <title>AirClean Brasília - Limpeza Especializada</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
     body {
       font-family: Arial, sans-serif;
       background: #ffffff;
@@ -198,12 +204,135 @@
       background-color: rgba(22, 101, 52, 0.1);
       color: #166534;
     }
+
+    @media (max-width: 600px) {
+      .room {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+      }
+
+      .room img {
+        width: 80%;
+        height: auto;
+      }
+    }
   </style>
 </head>
 <body>
   <header>
-    <img src="https://i.imgur.com/66RKMBJ.png" alt="Profissional de limpeza especializada" />
+    <img src="https://i.imgur.com/66RKMBJ.png" alt="Mulher profissional com produtos de limpeza" />
     <h1>Higiene Profunda e Carinho em Cada Cômodo da Sua Casa</h1>
     <p>Atendemos gestantes e idosos com uma faxina residencial completa, cuidadosa e sem produtos agressivos. Deixe seu lar impecável, livre de alergias, germes e odores — com todo o carinho e segurança que esse momento exige.</p>
     <a href="https://wa.me/5561986092092?text=Olá!%20Gostaria%20de%20agendar%20uma%20limpeza%20especializada%20para%20ambientes%20com%20gestantes%20ou%20idosos." class="cta-button">Agendar Limpeza no WhatsApp</a>
   </header>
+
+  <section class="benefits">
+    <div><strong>✅ Equipe Cuidadosa e Treinada</strong><br>Especialistas em limpeza para residências com pessoas sensíveis.</div>
+    <div><strong>🧴 Produtos Seguros e Ecológicos</strong><br>Sem cheiro forte e livres de substâncias tóxicas.</div>
+    <div><strong>🛏️ Conforto e Bem-estar</strong><br>Higienização profunda dos cômodos com foco em saúde e comodidade.</div>
+    <div><strong>📸 Antes e Depois</strong><br>Relatório com imagens para acompanhar a transformação.</div>
+  </section>
+
+  <section class="catalog">
+    <h2>Adicionais por Cômodo</h2>
+    <div class="room-list">
+      <div class="room">
+        <img src="https://i.imgur.com/SL4NIOB.png" alt="Banheiro antes e depois">
+        <div><strong>Banheiro</strong><br><span>R$ 60</span></div>
+      </div>
+      <div class="room">
+        <img src="https://i.imgur.com/2T2BJBI.png" alt="Sala limpa e organizada">
+        <div><strong>Sala</strong><br><span>R$ 55</span></div>
+      </div>
+      <div class="room">
+        <img src="https://i.imgur.com/TGF3IkD.png" alt="Cozinha higienizada">
+        <div><strong>Cozinha</strong><br><span>R$ 65</span></div>
+      </div>
+      <div class="room">
+        <img src="https://i.imgur.com/4J0NgxD.png" alt="Quarto limpo">
+        <div><strong>Quarto</strong><br><span>R$ 50</span></div>
+      </div>
+    </div>
+
+    <h2>Combos de Limpeza por Tipo de Imóvel</h2>
+    <div class="combos">
+      <table>
+        <thead>
+          <tr>
+            <th>Tipo de Imóvel</th>
+            <th>Cômodos Inclusos</th>
+            <th>Total Cômodos</th>
+            <th>Preço Avulso</th>
+            <th>Combo</th>
+            <th>Desconto</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Kitnet / Studio</td>
+            <td>1 cômodo + banheiro</td>
+            <td>2</td>
+            <td>R$ 110</td>
+            <td><span>R$ 95</span></td>
+            <td class="desconto"><span>R$ 15</span></td>
+          </tr>
+          <tr>
+            <td>Casa ou Ap. 1 quarto</td>
+            <td>Quarto + Sala + Cozinha + Banheiro</td>
+            <td>4</td>
+            <td>R$ 230</td>
+            <td><span>R$ 190</span></td>
+            <td class="desconto"><span>R$ 40</span></td>
+          </tr>
+          <tr>
+            <td>Casa ou Ap. 2 quartos</td>
+            <td>2 Quartos + Sala + Cozinha + Banheiro</td>
+            <td>5</td>
+            <td>R$ 280</td>
+            <td><span>R$ 230</span></td>
+            <td class="desconto"><span>R$ 50</span></td>
+          </tr>
+          <tr>
+            <td>Casa ou Ap. 3 quartos</td>
+            <td>3 Quartos + Sala + Cozinha + Banheiro</td>
+            <td>6</td>
+            <td>R$ 330</td>
+            <td><span>R$ 270</span></td>
+            <td class="desconto"><span>R$ 60</span></td>
+          </tr>
+        </tbody>
+      </table>
+      <a href="https://wa.me/5561986092092?text=Olá!%20Gostaria%20de%20agendar%20um%20combo%20de%20limpeza%20com%20vocês." class="cta-button" style="margin-top: 20px;">Agendar Combo via WhatsApp</a>
+    </div>
+  </section>
+
+  <footer>
+    Powered by <strong>AirClean Brasília</strong> - limpeza especializada para gestantes e idosos
+  </footer>
+
+  <div class="popup" id="promo">
+    <h3>🎉 Promoção exclusiva: Brinde para as primeiras clientes de hoje!</h3>
+    <p>⏳ <span class="timer" id="countdown">05:00</span></p>
+    <div class="popup-buttons">
+      <button class="accept" onclick="window.location.href='https://wa.me/5561986092092'">Aproveitar agora</button>
+      <button class="close" onclick="document.getElementById('promo').style.display='none'">Fechar</button>
+    </div>
+  </div>
+
+  <script>
+    let countdown = 300;
+    const timerElement = document.getElementById("countdown");
+    const timer = setInterval(() => {
+      const minutes = Math.floor(countdown / 60);
+      const seconds = countdown % 60;
+      timerElement.textContent = `${String(minutes).padStart(2, "0")}:${String(seconds).padStart(2, "0")}`;
+      if (countdown <= 0) {
+        clearInterval(timer);
+        document.getElementById("promo").style.display = "none";
+      }
+      countdown--;
+    }, 1000);
+  </script>
+</body>
+</html>

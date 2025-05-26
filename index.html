@@ -68,6 +68,50 @@
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
     }
 
+    /* NOVO: Catálogo */
+    .catalog {
+      margin: 40px auto;
+      max-width: 700px;
+      padding: 0 20px;
+      text-align: center;
+    }
+
+    .catalog h2 {
+      font-size: 1.5em;
+      margin-bottom: 20px;
+      color: #1f2937;
+    }
+
+    .room-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .room {
+      background-color: #f3f4f6;
+      padding: 16px;
+      border-radius: 12px;
+      box-shadow: 0 1px 5px rgba(0,0,0,0.05);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      width: 300px;
+    }
+
+    .room img {
+      width: 100px;
+      height: 80px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .room span {
+      font-weight: bold;
+      color: #16a34a;
+    }
+
     footer {
       margin-top: 40px;
       font-size: 0.9em;
@@ -146,6 +190,41 @@
     <div><strong>🔄 Faxina de Entrada e Saída</strong><br>Limpeza completa entre hóspedes com envio de fotos para seu controle.</div>
   </section>
 
+  <!-- CATÁLOGO DE CÔMODOS -->
+  <section class="catalog">
+    <h2>Adicionais por Cômodo</h2>
+    <div class="room-list">
+      <div class="room">
+        <img src="https://i.imgur.com/SL4NIOB.png" alt="Banheiro">
+        <div>
+          <strong>Banheiro</strong><br>
+          <span>R$ 40</span>
+        </div>
+      </div>
+      <div class="room">
+        <img src="https://i.imgur.com/pCkQqto.png" alt="Sala">
+        <div>
+          <strong>Sala</strong><br>
+          <span>R$ 55</span>
+        </div>
+      </div>
+      <div class="room">
+        <img src="https://i.imgur.com/TGF3IkD.png" alt="Cozinha">
+        <div>
+          <strong>Cozinha</strong><br>
+          <span>R$ 60</span>
+        </div>
+      </div>
+      <div class="room">
+        <img src="https://i.imgur.com/raPEIMA.png" alt="Quarto">
+        <div>
+          <strong>Quarto</strong><br>
+          <span>R$ 65</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <footer>
     Powered by <strong>AirClean Brasília</strong> - sua limpeza Airbnb profissional
   </footer>
@@ -162,7 +241,7 @@
 
   <script>
     // Temporizador de 5 minutos
-    let countdown = 300; // segundos
+    let countdown = 300;
     const timerElement = document.getElementById("countdown");
 
     const timer = setInterval(() => {

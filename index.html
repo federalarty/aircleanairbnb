@@ -68,10 +68,9 @@
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
     }
 
-    /* NOVO: Catálogo */
     .catalog {
       margin: 40px auto;
-      max-width: 700px;
+      max-width: 900px;
       padding: 0 20px;
       text-align: center;
     }
@@ -112,6 +111,28 @@
       color: #16a34a;
     }
 
+    .combos table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 30px;
+    }
+
+    .combos th, .combos td {
+      border: 1px solid #e5e7eb;
+      padding: 10px;
+      font-size: 14px;
+    }
+
+    .combos th {
+      background-color: #f3f4f6;
+      color: #1f2937;
+    }
+
+    .combos td span {
+      font-weight: bold;
+      color: #16a34a;
+    }
+
     footer {
       margin-top: 40px;
       font-size: 0.9em;
@@ -119,7 +140,6 @@
       padding-bottom: 40px;
     }
 
-    /* === POPUP (verde suave) === */
     .popup {
       position: fixed;
       bottom: 20px;
@@ -177,20 +197,19 @@
 </head>
 <body>
   <header>
-    <img src="https://i.imgur.com/AWdQIvo.png" alt="Profissional de limpeza Airbnb" />
-    <h1>Limpeza Profissional para Airbnb em Brasília</h1>
-    <p>Chegue e encontre seu espaço sempre limpo, cheiroso e pronto para receber seus hóspedes. Serviço pontual, com fotos antes e depois da faxina.</p>
-    <a href="https://wa.me/5561986092092?text=Olá!%20Gostaria%20de%20agendar%20uma%20limpeza%20Airbnb%20em%20Brasília." class="cta-button">Agendar Limpeza no WhatsApp</a>
+    <img src="https://i.imgur.com/66RKMBJ.png" alt="Profissional de limpeza especializada" />
+    <h1>Limpeza Especializada para Gestantes e Idosos</h1>
+    <p>Ambientes higienizados, seguros e preparados para quem mais precisa de cuidado. Nossa equipe realiza faxinas profundas com foco em saúde, conforto e prevenção.</p>
+    <a href="https://wa.me/5561986092092?text=Olá!%20Gostaria%20de%20agendar%20uma%20limpeza%20especializada%20para%20ambientes%20com%20gestantes%20ou%20idosos." class="cta-button">Agendar Limpeza no WhatsApp</a>
   </header>
 
   <section class="benefits">
-    <div><strong>✅ Equipe Treinada e Pontual</strong><br>Profissionais experientes que respeitam seu tempo e seu imóvel.</div>
-    <div><strong>🧼 Produtos Próprios e Ecológicos</strong><br>Levamos tudo que é necessário para uma limpeza impecável.</div>
-    <div><strong>🕒 Disponível 7 Dias por Semana</strong><br>Atendimento todos os dias, inclusive domingos e feriados.</div>
-    <div><strong>🔄 Faxina de Entrada e Saída</strong><br>Limpeza completa entre hóspedes com envio de fotos para seu controle.</div>
+    <div><strong>✅ Equipe Cuidadosa e Treinada</strong><br>Especialistas em limpeza para residências com pessoas sensíveis.</div>
+    <div><strong>🧴 Produtos Seguros e Ecológicos</strong><br>Sem cheiro forte e livres de substâncias tóxicas.</div>
+    <div><strong>🛏️ Conforto e Bem-estar</strong><br>Higienização profunda dos cômodos com foco em saúde e comodidade.</div>
+    <div><strong>📸 Antes e Depois</strong><br>Relatório com imagens para acompanhar a transformação.</div>
   </section>
 
-  <!-- CATÁLOGO DE CÔMODOS -->
   <section class="catalog">
     <h2>Adicionais por Cômodo</h2>
     <div class="room-list">
@@ -198,11 +217,11 @@
         <img src="https://i.imgur.com/SL4NIOB.png" alt="Banheiro">
         <div>
           <strong>Banheiro</strong><br>
-          <span>R$ 40</span>
+          <span>R$ 60</span>
         </div>
       </div>
       <div class="room">
-        <img src="https://i.imgur.com/pCkQqto.png" alt="Sala">
+        <img src="https://i.imgur.com/2T2BJBI.png" alt="Sala">
         <div>
           <strong>Sala</strong><br>
           <span>R$ 55</span>
@@ -212,24 +231,73 @@
         <img src="https://i.imgur.com/TGF3IkD.png" alt="Cozinha">
         <div>
           <strong>Cozinha</strong><br>
-          <span>R$ 60</span>
-        </div>
-      </div>
-      <div class="room">
-        <img src="https://i.imgur.com/raPEIMA.png" alt="Quarto">
-        <div>
-          <strong>Quarto</strong><br>
           <span>R$ 65</span>
         </div>
       </div>
+      <div class="room">
+        <img src="https://i.imgur.com/4J0NgxD.png" alt="Quarto">
+        <div>
+          <strong>Quarto</strong><br>
+          <span>R$ 50</span>
+        </div>
+      </div>
+    </div>
+
+    <h2>Combos de Limpeza por Tipo de Imóvel</h2>
+    <div class="combos">
+      <table>
+        <thead>
+          <tr>
+            <th>Tipo de Imóvel</th>
+            <th>Cômodos Inclusos</th>
+            <th>Total Cômodos</th>
+            <th>Preço Avulso</th>
+            <th>Combo</th>
+            <th>Desconto</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Kitnet / Studio</td>
+            <td>1 cômodo + banheiro</td>
+            <td>2</td>
+            <td>R$ 110</td>
+            <td><span>R$ 95</span></td>
+            <td><span>R$ 15</span></td>
+          </tr>
+          <tr>
+            <td>Casa ou Ap. 1 quarto</td>
+            <td>Quarto + Sala + Cozinha + Banheiro</td>
+            <td>4</td>
+            <td>R$ 230</td>
+            <td><span>R$ 190</span></td>
+            <td><span>R$ 40</span></td>
+          </tr>
+          <tr>
+            <td>Casa ou Ap. 2 quartos</td>
+            <td>2 Quartos + Sala + Cozinha + Banheiro</td>
+            <td>5</td>
+            <td>R$ 280</td>
+            <td><span>R$ 230</span></td>
+            <td><span>R$ 50</span></td>
+          </tr>
+          <tr>
+            <td>Casa ou Ap. 3 quartos</td>
+            <td>3 Quartos + Sala + Cozinha + Banheiro</td>
+            <td>6</td>
+            <td>R$ 330</td>
+            <td><span>R$ 270</span></td>
+            <td><span>R$ 60</span></td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </section>
 
   <footer>
-    Powered by <strong>AirClean Brasília</strong> - sua limpeza Airbnb profissional
+    Powered by <strong>AirClean Brasília</strong> - limpeza especializada para gestantes e idosos
   </footer>
 
-  <!-- POPUP DE PROMOÇÃO -->
   <div class="popup" id="promo">
     <h3>🎉 Promoção exclusiva: Brinde para as primeiras clientes de hoje!</h3>
     <p>⏳ <span class="timer" id="countdown">05:00</span></p>
@@ -240,7 +308,6 @@
   </div>
 
   <script>
-    // Temporizador de 5 minutos
     let countdown = 300;
     const timerElement = document.getElementById("countdown");
 
